@@ -338,7 +338,7 @@ export class TsetlinModel {
 
   static defaultSearchSpace() {
     return {
-      nClauses: { type: 'int_log_uniform', low: 20, high: 2000 },
+      nClauses: { type: 'categorical', values: [20, 50, 100, 200, 500, 1000, 2000] },
       threshold: { type: 'int_uniform', low: 10, high: 200 },
       s: { type: 'log_uniform', low: 1.0, high: 20.0 },
       stateBits: { type: 'int_uniform', low: 4, high: 12 },
