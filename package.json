@@ -1,0 +1,33 @@
+{
+  "name": "@wlearn/tsetlin",
+  "version": "0.1.0",
+  "description": "Tsetlin Machine compiled to WebAssembly -- interpretable ML in browsers and Node.js",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src/",
+    "wasm/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node test/test.js",
+    "build": "bash scripts/build-wasm.sh",
+    "verify": "bash scripts/verify-exports.sh"
+  },
+  "dependencies": {
+    "@wlearn/types": "^0.1.0",
+    "@wlearn/core": "^0.1.0"
+  },
+  "keywords": ["tsetlin-machine", "interpretable-ml", "machine-learning", "wasm", "webassembly", "wlearn", "classification", "regression"],
+  "author": "Anton Zemlyansky",
+  "license": "MIT"
+}
