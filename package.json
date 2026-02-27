@@ -24,10 +24,19 @@
     "verify": "bash scripts/verify-exports.sh"
   },
   "dependencies": {
-    "@wlearn/types": "^0.1.0",
-    "@wlearn/core": "^0.1.0"
+    "@wlearn/types": "0.1.0",
+    "@wlearn/core": "0.1.0"
   },
-  "keywords": ["tsetlin-machine", "interpretable-ml", "machine-learning", "wasm", "webassembly", "wlearn", "classification", "regression"],
+  "keywords": [
+    "tsetlin-machine",
+    "interpretable-ml",
+    "machine-learning",
+    "wasm",
+    "webassembly",
+    "wlearn",
+    "classification",
+    "regression"
+  ],
   "author": "Anton Zemlyansky",
   "license": "MIT"
 }
