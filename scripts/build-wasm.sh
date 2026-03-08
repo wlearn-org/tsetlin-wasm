@@ -58,7 +58,7 @@ emcc \
   "${UPSTREAM_DIR}/src/Tools.c" \
   "${UPSTREAM_DIR}/src/random/pcg32_fast.c" \
   -I "${UPSTREAM_DIR}/include" \
-  -o "${OUTPUT_DIR}/tsetlin.cjs" \
+  -o "${OUTPUT_DIR}/tsetlin.js" \
   -std=c11 \
   -s MODULARIZE=1 \
   -s SINGLE_FILE=1 \
@@ -84,5 +84,5 @@ wasm_embedded: true
 EOF
 
 echo "=== Build complete ==="
-ls -lh "${OUTPUT_DIR}/tsetlin.cjs"
+ls -lh "${OUTPUT_DIR}/tsetlin.js"
 cat "${OUTPUT_DIR}/BUILD_INFO"

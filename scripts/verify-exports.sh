@@ -5,7 +5,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
-WASM_FILE="${PROJECT_DIR}/wasm/tsetlin.cjs"
+WASM_FILE="${PROJECT_DIR}/wasm/tsetlin.js"
 
 if [ ! -f "$WASM_FILE" ]; then
   echo "ERROR: ${WASM_FILE} not found. Run build-wasm.sh first."

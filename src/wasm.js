@@ -8,7 +8,7 @@ async function loadTsetlin(options = {}) {
   if (loading) return loading
 
   loading = (async () => {
-    const createTsetlin = require('../wasm/tsetlin.cjs')
+    const createTsetlin = require('../wasm/tsetlin.js')
     wasmModule = await createTsetlin(options)
     return wasmModule
   })()
