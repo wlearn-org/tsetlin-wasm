@@ -2,7 +2,7 @@
 
 Tsetlin Machine compiled to WebAssembly -- interpretable ML in browsers and Node.js.
 
-Wraps the C core from [TMU](https://github.com/cair/tmu) (Tsetlin Machine Unified) by Ole-Christoffer Granmo. ESM module, zero native dependencies.
+Wraps the C core from [TMU](https://github.com/cair/tmu) (Tsetlin Machine Unified) by Ole-Christoffer Granmo. CommonJS module, zero native dependencies.
 
 ## Install
 
@@ -13,7 +13,7 @@ npm install @wlearn/tsetlin
 ## Quick start
 
 ```js
-import { TsetlinModel } from '@wlearn/tsetlin'
+const { TsetlinModel } = require('@wlearn/tsetlin')
 
 // Create model (async -- loads WASM)
 const model = await TsetlinModel.create({

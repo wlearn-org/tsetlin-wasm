@@ -2,10 +2,13 @@
   "name": "@wlearn/tsetlin",
   "version": "0.1.0",
   "description": "Tsetlin Machine compiled to WebAssembly -- interpretable ML in browsers and Node.js",
-  "type": "module",
+  "type": "commonjs",
   "main": "src/index.js",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "require": "./src/index.js",
+      "default": "./src/index.js"
+    }
   },
   "files": [
     "src/",

@@ -1,10 +1,10 @@
-import { getWasm, loadTsetlin } from './wasm.js'
-import {
+const { getWasm, loadTsetlin } = require('./wasm.js')
+const {
   normalizeX, normalizeY,
   encodeBundle, decodeBundle,
   register,
   DisposedError, NotFittedError
-} from '@wlearn/core'
+} = require('@wlearn/core')
 
 const leakRegistry = typeof FinalizationRegistry !== 'undefined'
   ? new FinalizationRegistry(({ ptr, freeFn }) => {
@@ -22,7 +22,7 @@ function getLastError() {
 
 const LOAD_SENTINEL = Symbol('load')
 
-export class TsetlinModel {
+class TsetlinModel {
   #handle = null
   #freed = false
   #ptrRef = null
@@ -431,3 +431,5 @@ export class TsetlinModel {
 // Register loaders with @wlearn/core
 register('wlearn.tsetlin.classifier@1', (m, t, b) => TsetlinModel._fromBundle(m, t, b))
 register('wlearn.tsetlin.regressor@1', (m, t, b) => TsetlinModel._fromBundle(m, t, b))
+
+module.exports = { TsetlinModel }

@@ -1,9 +1,3 @@
-import { fileURLToPath } from 'url'
-import { dirname } from 'path'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
 let passed = 0
 let failed = 0
 
@@ -67,12 +61,13 @@ function makeRegressionData(rng, nSamples, nFeatures) {
   return { X, y }
 }
 
+async function main() {
 // ============================================================
 // WASM Loading
 // ============================================================
 console.log('\n=== WASM Loading ===')
 
-const { loadTsetlin } = await import('../src/wasm.js')
+const { loadTsetlin } = require('../src/wasm.js')
 const wasm = await loadTsetlin()
 
 await test('WASM module loads', async () => {
@@ -94,7 +89,7 @@ await test('Exported functions present', async () => {
 // ============================================================
 console.log('\n=== Model Basics ===')
 
-const { TsetlinModel } = await import('../src/model.js')
+const { TsetlinModel } = require('../src/model.js')
 
 await test('Create unfitted model', async () => {
   const model = await TsetlinModel.create({ task: 'classification', nClauses: 20 })
@@ -507,3 +502,6 @@ await test('Same seed = same predictions', async () => {
 // ============================================================
 console.log(`\n${passed + failed} tests: ${passed} passed, ${failed} failed\n`)
 if (failed > 0) process.exit(1)
+}
+
+main()
