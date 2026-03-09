@@ -41,5 +41,9 @@
     "regression"
   ],
   "author": "Anton Zemlyansky",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wlearn-org/tsetlin-wasm.git"
+  },
   "license": "MIT"
 }
