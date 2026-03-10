@@ -2,7 +2,7 @@
 
 Tsetlin Machine compiled to WebAssembly -- interpretable ML in browsers and Node.js.
 
-Wraps the C core from [TMU](https://github.com/cair/tmu) (Tsetlin Machine Unified) by Ole-Christoffer Granmo. CommonJS module, zero native dependencies.
+Part of [wlearn](https://wlearn.org) ([GitHub](https://github.com/wlearn-org), [all packages](https://github.com/wlearn-org/wlearn#repository-structure)). Wraps the C core from [TMU](https://github.com/cair/tmu) (Tsetlin Machine Unified) by Ole-Christoffer Granmo. CommonJS module, zero native dependencies.
 
 ## Install
 
