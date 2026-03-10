@@ -17,6 +17,7 @@ const { TsetlinModel } = require('@wlearn/tsetlin')
 
 // Create model (async -- loads WASM)
 const model = await TsetlinModel.create({
+  task: 'classification',  // or 'regression'; auto-detected from labels if omitted
   nClauses: 200,
   threshold: 50,
   s: 3.0,
